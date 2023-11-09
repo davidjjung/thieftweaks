@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.davigj.thief_tweaks.core.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "refmap": "thief_tweaks.refmap.json",
+  "mixins": [
+    "CombatTrackerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
