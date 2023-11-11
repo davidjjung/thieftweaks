@@ -1,6 +1,7 @@
 {
-  "death.assassinated": "%s was assassinated",
-  "death.assassinated1": "%s was slain by an unknown assailant",
-  "death.assassinated2": "%s met a mysterious end",
-  "death.anonymous": "A mysterious figure was slain"
+  "death.assassinated": "%s met a mysterious end",
+  "death.anonymous": "A mysterious figure was slain",
+  "item.environmental.thief_hood.alt_desc": "Players Defeated",
+  "item.environmental.thief_hood.alt_desc2": "Monsters or Players Defeated",
+  "item.environmental.thief_hood.on_invisible": "Upon Invisibility:"
 }

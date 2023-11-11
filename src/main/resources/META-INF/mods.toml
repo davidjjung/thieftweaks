@@ -37,3 +37,17 @@ mandatory = true
 versionRange = "[6.2.0,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.thief_tweaks]]
+modId = "environmental"
+mandatory = true
+versionRange = "[3.0.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.thief_tweaks]]
+modId = "farmersdelight"
+mandatory = false
+versionRange = "[1.2.3,)"
+ordering = "AFTER"
+side = "BOTH"

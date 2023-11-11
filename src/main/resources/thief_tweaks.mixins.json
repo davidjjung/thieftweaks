@@ -5,7 +5,15 @@
   "minVersion": "0.8",
   "refmap": "thief_tweaks.refmap.json",
   "mixins": [
-    "CombatTrackerMixin"
+    "ArchitectBeltMixin",
+    "CombatTrackerMixin",
+    "ExplorerArmorItemMixin",
+    "HealerPouchMixin",
+    "ThiefHoodMixin",
+    "WandererBootsMixin"
+  ],
+  "client": [
+    "ExplorerArmorClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
