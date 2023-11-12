@@ -25,7 +25,7 @@ import java.util.List;
 @Mixin(ExplorerArmorItem.class)
 public class ExplorerArmorClientMixin {
     @OnlyIn(Dist.CLIENT)
-    @Inject(method = "appendHoverText", at = @At(value = "RETURN"), remap = false)
+    @Inject(method = "appendHoverText", at = @At(value = "RETURN"))
     private void modifyAppendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn, CallbackInfo ci) {
         if (TTConfig.COMMON.invisRegen.get() && stack.getItem() instanceof ThiefHoodItem hoodItem) {
             tooltip.add(Component.translatable("item.environmental.thief_hood.on_invisible").withStyle(ChatFormatting.GRAY));

@@ -4,20 +4,21 @@ import com.davigj.thief_tweaks.core.TTConfig;
 import com.davigj.thief_tweaks.core.ThiefTweaksMod;
 import com.teamabnormals.environmental.common.item.explorer.ThiefHoodItem;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.CombatTracker;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(CombatTracker.class)
 public abstract class CombatTrackerMixin {
-    private final LivingEntity mob;
+    @Shadow
+    private LivingEntity mob;
 
     public CombatTrackerMixin(LivingEntity p_19285_) {
         this.mob = p_19285_;
@@ -27,7 +28,7 @@ public abstract class CombatTrackerMixin {
     private void modifyDeathMessage(CallbackInfoReturnable<Component> callbackInfo) {
         Logger LOGGER = LogManager.getLogger(ThiefTweaksMod.MOD_ID);
         CombatTracker combatTracker = (CombatTracker) (Object) this;
-        if (TTConfig.COMMON.anonymousDeath.get()) {
+        if (TTConfig.COMMON.anonymousDeath.get() && mob != null) {
             if (mob.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ThiefHoodItem) {
                 if (!mob.level.isClientSide) {
                     LOGGER.info("Entity that died was actually " + mob.getDisplayName().getString());
@@ -36,7 +37,7 @@ public abstract class CombatTrackerMixin {
                 callbackInfo.setReturnValue(deathMessage);
             }
         }
-        if (TTConfig.COMMON.anonymousKills.get()) {
+        if (TTConfig.COMMON.anonymousKills.get() && mob != null) {
             LivingEntity killer = combatTracker.getKiller();
             if (killer != null) {
                 if (killer.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof ThiefHoodItem) {

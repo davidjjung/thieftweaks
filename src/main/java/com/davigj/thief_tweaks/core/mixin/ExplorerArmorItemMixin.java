@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(ExplorerArmorItem.class)
 public class ExplorerArmorItemMixin {
 
-    @Inject(method = "getDescription", at = @At("HEAD"), cancellable = true, remap = false)
+    @Inject(method = "getDescription*", at = @At("HEAD"), cancellable = true, remap = false)
     private void modifyGetDescription(CallbackInfoReturnable<MutableComponent> info) {
         ExplorerArmorItem explorerArmorItem = (ExplorerArmorItem) (Object) this;
         if (TTConfig.COMMON.doPlayerKillXP.get() && explorerArmorItem.getDescriptionId().equals("item.environmental.thief_hood")) {
