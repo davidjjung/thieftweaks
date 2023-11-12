@@ -1,16 +1,16 @@
 modLoader = "javafml"
 loaderVersion = "[32,)"
-issueTrackerURL = ""
+issueTrackerURL = "https://github.com/davidjjung/thieftweaks/issues"
 license = "MIT License"
 
 [[mods]]
 modId = "thief_tweaks"
 version = "${file.jarVersion}"
 logoFile = "logo.png"
-itemIcon = "minecraft:dirt"
+itemIcon = "environmental:thief_hood"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
-credits = ""
+credits = "Credits to MMD's Discord and Jsburg for coding help."
 displayURL = ""
 displayName = "Thief's Tweaks"
 description = '''
