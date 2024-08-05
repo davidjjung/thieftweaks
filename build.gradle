@@ -78,8 +78,9 @@ sourceSets.main.resources {
 dependencies {
     minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
     implementation fg.deobf("com.teamabnormals:blueprint:${project.minecraft}-${project.blueprint}")
-    implementation fg.deobf("maven.modrinth:environmental:3.0.0")
+    implementation fg.deobf("maven.modrinth:environmental:LGP6wAh1")
     compileOnly fg.deobf("maven.modrinth:farmers-delight:1.19.2-1.2.3")
+    compileOnly fg.deobf("maven.modrinth:jade:kp0HjPre")
 
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-common-api:${project.jei}")
     compileOnly fg.deobf("mezz.jei:jei-${project.minecraft}-forge-api:${project.jei}")

@@ -11,8 +11,8 @@ itemIcon = "environmental:thief_hood"
 configBackground = "minecraft:textures/block/dirt.png"
 authors = "DavigJ"
 credits = "Credits to MMD's Discord and Jsburg for coding help."
-displayURL = ""
-displayName = "Thief's Tweaks"
+displayURL = "https://modrinth.com/mod/thief-tweaks"
+displayName = "Thief Tweaks"
 description = '''
     A mod that adds a couple tweaks to the Thief's Hood from Environmental.
     '''

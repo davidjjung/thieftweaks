@@ -9,6 +9,7 @@
     "CombatTrackerMixin",
     "ExplorerArmorItemMixin",
     "HealerPouchMixin",
+    "ObjectNameProviderMixin",
     "ThiefHoodMixin",
     "WandererBootsMixin"
   ],

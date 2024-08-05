@@ -14,6 +14,7 @@ public class TTConfig {
         public final ForgeConfigSpec.ConfigValue<Boolean> invisRegen;
         public final ForgeConfigSpec.ConfigValue<Boolean> knifeBuff;
         public final ForgeConfigSpec.ConfigValue<Boolean> backstabbingBonus;
+        public final ForgeConfigSpec.ConfigValue<Boolean> jadeCompat;
 
         public final ForgeConfigSpec.ConfigValue<Boolean> customHoodXPThresholds;
         public final ForgeConfigSpec.ConfigValue<Integer> hoodXPThreshold1;
@@ -55,6 +56,7 @@ public class TTConfig {
                     .define("Regenerate health upon turning invisible", false);
             knifeBuff = builder.comment("Hood wearers deal extra damage with knives").define("fun with knives", false);
             backstabbingBonus = builder.comment("Hood wearers deal extra damage with knives with the Backstabbing enchantment from Farmer's Delight, when the victim's back is turned").define("backstab bonus", false);
+            jadeCompat = builder.comment("Entities wearing thief hoods do not display their name in Jade GUIs").define("Jade compat", true);
             builder.pop();
             builder.push("explorer_armor_level_caps");
             customHoodXPThresholds = builder.comment("Custom XP level caps are enabled for the thief's hood").define("Custom hood level caps", false);
